@@ -11,10 +11,12 @@ public class Descanso {
         this.numerosSemanas = numerosSemanas;
     }
     public String getStatusGeral() {
-        if (horasDescanso/numerosSemanas >= 26){
+        if (numerosSemanas == 0 || horasDescanso == 0){
+            return "Cansado";
+        }else if(horasDescanso/numerosSemanas >= 26){
             return "Descansado";
-        }else {
+        }else{
             return "Cansado";
         }
-    }
+        }
 }
