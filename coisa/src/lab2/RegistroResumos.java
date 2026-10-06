@@ -40,17 +40,15 @@ public class RegistroResumos {
     }
 
     public String imprimeResumos() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("- ").append(quantidadeResumos).append(" resumo(s) cadastrado(s)\n");
-        sb.append("- ");
+        String resultado = "- " + quantidadeResumos + " resumo(s) cadastrado(s)\n- ";
 
         for (int i = 0; i < quantidadeResumos; i++) {
-            sb.append(temas[i]);
+            resultado += temas[i];
             if (i < quantidadeResumos - 1) {
-                sb.append(" | ");
+                resultado += " | ";
             }
         }
-        return sb.toString();
+        return resultado;
     }
 
     public int conta() {
