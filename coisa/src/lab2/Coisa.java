@@ -47,6 +47,16 @@ public class Coisa {
         prog2.cadastraNota(4, 10.0);
         System.out.println(prog2.aprovado());
         System.out.println(prog2.toString());
+       Disciplina d1 = new Disciplina("P2");
+       d1.cadastraNota(1, 8);
+       d1.cadastraNota(2, 6);
+       d1.cadastraNota(3, 7);
+       d1.cadastraNota(4, 7);
+       System.out.println(d1.calculaMedia());
+       Disciplina d2 = new Disciplina("P2", 2, new double[]{6, 4});
+       d2.cadastraNota(1, 10);
+       d2.cadastraNota(2, 5);
+       System.out.println(d2.calculaMedia());
     }
     private static void registrarResumos() {
         RegistroResumos meusResumos = new RegistroResumos(100);  // 100 resumos
